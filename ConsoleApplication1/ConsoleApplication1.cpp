@@ -46,3 +46,4 @@ int main()
 	cout << positive(5) << endl;
 	return 0;
 }
+//zmiana test2
