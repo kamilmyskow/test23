@@ -3,7 +3,7 @@
 #include <algorithm>
 #include "ConsoleApplication1.h"
 using namespace std;
-int max (int a,int b,int c)
+int spr_max (int a,int b,int c)
 {
 	int maximum;
 	if (a > b) maximum = a;
@@ -17,12 +17,12 @@ int max (int a,int b,int c)
 
 }
 
-int min(int a, int b, int c)
+int spr_min(int a, int b, int c)
 {
 	int minimum;
-	if ((a < b) || (a < c)) minimum = a;
-	if ((b < a) || (b < c)) minimum = b;
-	if ((c < a) || (c < b)) minimum = c;
+	if ((a < b) && (a < c)) minimum = a;
+	if ((b < a) && (b < c)) minimum = b;
+	if ((c < a) && (c < b)) minimum = c;
 
 	return minimum;
 
@@ -41,8 +41,8 @@ bool positive(int x) {
 
 int main()
 {
-	cout << max(-1, -8, 1)<<endl;
-	cout << min(-1, 0, 1) << endl;
+	cout << spr_max(-1, 8, 1)<<endl;
+	cout << spr_min(-20,-40,-30) << endl;
 	cout << positive(5) << endl;
 	return 0;
 }
