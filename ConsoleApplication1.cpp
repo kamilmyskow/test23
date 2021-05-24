@@ -20,6 +20,20 @@ int spr_max (int a,int b,int c)
 	return maximum;
 
 }
+int spr_min(int a, int b, int c)
+{
+	int minimum;
+	if (a < b) minimum = a;
+	if (a < c) minimum = a;
+	if (a > b) minimum = b;
+	if (a > c) minimum = c;
+	if (b < c) minimum = b;
+	if (c > b) minimum = c;
+
+	return minimum;
+
+}
+
 
 
 
