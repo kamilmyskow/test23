@@ -23,12 +23,19 @@ int spr_max (int a,int b,int c)
 int spr_min(int a, int b, int c)
 {
 	int minimum;
+/*
 	if (a < b) minimum = a;
 	if (a < c) minimum = a;
 	if (a > b) minimum = b;
 	if (a > c) minimum = c;
 	if (b < c) minimum = b;
 	if (c > b) minimum = c;
+	*/
+	//optymalizacja kodu 
+	if ((a < b) && (a < c)) minimum = a;
+	if ((b < a) && (b < c)) minimum = b;
+	if ((c < a) && (c < b)) minimum = c;
+
 
 	return minimum;
 
@@ -42,6 +49,6 @@ int spr_min(int a, int b, int c)
 int main()
 {
 	cout << spr_max(-1, 8, 1)<<endl;
-	
+	cout << spr_min(-20,-40,-30) << endl; // sprawdzenie poprawności programu
 	return 0;
 }
