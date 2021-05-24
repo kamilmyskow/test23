@@ -41,7 +41,13 @@ int spr_min(int a, int b, int c)
 
 }
 
-
+bool positive(int x) {
+	
+	if (x >= 0)
+		return true;
+	else
+		return false;
+}
 
 
 
