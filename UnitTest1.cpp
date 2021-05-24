@@ -1,4 +1,4 @@
-#inc#include "pch.h"
+#include "pch.h"
 #include "CppUnitTest.h"
 #include "../ConsoleApplication1/ConsoleApplication1.cpp"
 #include <iostream>
@@ -21,7 +21,10 @@ namespace UnitTest1
 		{
 			Assert::AreEqual(spr_min(-1,2,5), -1);
 		}
-		
+		TEST_METHOD(is_positive) //sprawdzenie czy wybrana liczba z przedziału -5=< x =<5 jest dodatnia ( większa od 0)
+		{
+			Assert::AreSame(positive(5), true);
+		}
 		
 	};
 }
